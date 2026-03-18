@@ -162,7 +162,7 @@
     {
       "cell_type": "code",
       "source": [
-        "#Create a function to calculate simple interest.\n",
+        "#Question5 Create a function to calculate simple interest.\n",
         "#Input: Enter P, R, T\n",
         "#Output: Simple Interest\n",
         "principle = float(input(\"Enter the Principle:\"))\n",

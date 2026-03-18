@@ -191,6 +191,42 @@
           ]
         }
       ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Question 6: A shopkeeper wants to calculate total bill after discount.\n",
+        "#Input: Enter price and discount percentage\n",
+        "#Output: Final price after discount\n",
+        "#Answer :-\n",
+        "# Using direct formula in one line\n",
+        "\n",
+        "price = float(input(\"Enter original price: \"))\n",
+        "discount = float(input(\"Enter discount percentage: \"))\n",
+        "\n",
+        "final_price = price * (1 - discount / 100)\n",
+        "\n",
+        "print(\"Final price after discount is:\", final_price)"
+      ],
+      "metadata": {
+        "id": "t0ZtwHLJUUgl",
+        "outputId": "900fc81d-0af9-49db-e7b4-327970bb0883",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter original price: 8000\n",
+            "Enter discount percentage: 20\n",
+            "Final price after discount is: 6400.0\n"
+          ]
+        }
+      ]
     }
   ],
   "metadata": {

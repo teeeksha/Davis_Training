@@ -1,0 +1,11 @@
+# Example Input
+d = {"b":2, "a":1}
+
+# Sort keys
+sorted_dict = {}
+
+for key in sorted(d):
+    sorted_dict[key] = d[key]
+
+print(sorted_dict)
+#Output:-{'a': 1, 'b': 2}

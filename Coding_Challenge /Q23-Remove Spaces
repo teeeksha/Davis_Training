@@ -1,0 +1,12 @@
+# Example Input
+s = "hello world"
+
+result = ""
+
+# Remove spaces
+for ch in s:
+    if ch != " ":
+        result += ch
+
+print(result)
+#Output:-helloworld

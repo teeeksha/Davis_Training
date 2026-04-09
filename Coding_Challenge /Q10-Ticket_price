@@ -1,0 +1,9 @@
+# Example Input
+day = "Sunday"
+
+# Decide price
+if day == "Sunday":
+    print(200)
+else:
+    print(100)
+#Output:- 200

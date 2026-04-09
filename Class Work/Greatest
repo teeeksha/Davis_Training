@@ -1,0 +1,28 @@
+#Find out greatest digit present in given number
+#Input : 3723
+#output : greatest digit -- 7
+#Answer :
+num_str = input("Enter a number: ")
+
+greatest_digit = 0
+for digit_char in num_str:
+    digit = int(digit_char)
+    if digit > greatest_digit:
+        greatest_digit = digit
+
+print(f"greatest digit -- {greatest_digit}")
+for x in range (10):
+      print (x)
+     
+Enter a number: 3723
+greatest digit -- 7
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9

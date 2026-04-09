@@ -1,0 +1,14 @@
+# Function to return even numbers
+def get_even(lst):
+    result = []
+    
+    # Filter even numbers
+    for i in lst:
+        if i % 2 == 0:
+            result.append(i)
+    
+    return result
+
+# Example Input
+print(get_even([1,2,3,4]))
+#Output:-[2, 4]

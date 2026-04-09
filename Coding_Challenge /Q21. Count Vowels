@@ -1,0 +1,12 @@
+# Example Input
+s = "hello"
+
+count = 0
+
+# Check each character
+for ch in s:
+    if ch in "aeiouAEIOU":
+        count += 1
+
+print(count)
+#Output:-2

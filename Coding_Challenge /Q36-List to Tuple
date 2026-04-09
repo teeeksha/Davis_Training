@@ -1,0 +1,8 @@
+# Example Input
+lst = [1,2,3]
+
+# Convert
+t = tuple(lst)
+
+print(t)
+#Output:-(1, 2, 3)

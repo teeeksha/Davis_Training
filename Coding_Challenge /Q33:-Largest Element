@@ -1,0 +1,12 @@
+# Example Input
+lst = [10,20,5,15]
+
+# Remove max once
+max_val = max(lst)
+lst.remove(max_val)
+
+# Find next max
+second = max(lst)
+
+print(second)
+# output:-15

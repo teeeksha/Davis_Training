@@ -1,0 +1,12 @@
+# Example Input
+sales = [100,200,150,300,250,400,100]
+
+# Initialize total
+total = 0
+
+# Add all elements
+for i in sales:
+    total += i
+
+print(total)
+#Output:- 1500

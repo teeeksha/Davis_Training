@@ -1,0 +1,12 @@
+# Example Input
+lst = [10,60,30,80]
+
+count = 0
+
+# Count numbers > 50
+for i in lst:
+    if i > 50:
+        count += 1
+
+print(count)
+#Output:- 2

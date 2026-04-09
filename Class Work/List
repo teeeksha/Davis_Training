@@ -1,0 +1,17 @@
+##take a list of 15 numbers and ask the user to input any number and now search that element in the list  and remove all the occurences of that number from the list excluding the first occurence
+lst = [int(input("Enter number: ")) for _ in range(15)]
+x = int(input("Enter number to search: "))
+
+count = 0
+
+for i in range(len(lst)):
+    if lst[i] == x:
+        count += 1
+        if count > 1:
+            lst[i] = None   # mark extra occurrences
+
+# Remove None values
+while None in lst:
+    lst.remove(None)
+
+print("Updated list:", lst)

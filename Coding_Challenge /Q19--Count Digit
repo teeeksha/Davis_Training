@@ -1,0 +1,12 @@
+# Example Input
+num = 45678
+
+count = 0
+
+# Count digits
+while num > 0:
+    count += 1
+    num = num // 10
+
+print(count)
+#Output:-5

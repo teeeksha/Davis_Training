@@ -1,0 +1,8 @@
+# Example Input
+s = "Python is great"
+
+# Split words
+words = s.split()
+
+print(len(words))
+#Output:-3

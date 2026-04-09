@@ -1,0 +1,15 @@
+# Function to calculate total bill
+def total_bill(lst):
+    total = 0
+    
+    # Add all values
+    for i in lst:
+        total += i
+    
+    return total
+
+# Example Input
+items = [100,200,300]
+
+print(total_bill(items))
+# Output:-600

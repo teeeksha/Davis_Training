@@ -1,0 +1,14 @@
+# Example Input
+lst = [1,2,2,3]
+
+freq = {}
+
+# Count frequency
+for i in lst:
+    if i in freq:
+        freq[i] += 1
+    else:
+        freq[i] = 1
+
+print(freq)
+#Output:-{1: 1, 2: 2, 3: 1}

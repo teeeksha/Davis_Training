@@ -1,0 +1,13 @@
+#Question 7: Set Difference and Intersection
+#Problem Statement:Find the intersection and difference between two sets
+A = {1, 2, 3, 4}
+B = {3, 4, 5, 6}
+
+intersection = A & B
+difference = A - B
+
+print("Intersection:", intersection)
+print("Difference:", difference)
+     #output
+Intersection: {3, 4}
+Difference: {1, 2}

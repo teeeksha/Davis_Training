@@ -1,0 +1,13 @@
+# Example Input
+l1 = [1,2,3]
+l2 = [2,3,4]
+
+common = []
+
+# Find common elements
+for i in l1:
+    if i in l2 and i not in common:
+        common.append(i)
+
+print(common)
+#Output:-[2, 3]

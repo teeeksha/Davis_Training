@@ -1,0 +1,13 @@
+# Example Input
+s = "I love programming"
+
+words = s.split()
+longest = words[0]
+
+# Compare lengths
+for word in words:
+    if len(word) > len(longest):
+        longest = word
+
+print(longest)
+#Output:- Programming

@@ -1,7 +1,10 @@
 #Question 2:
 #Scenario:An online platform categorizes users by age group.
 #Task:Write a program to classify the user as Minor, Adult, or Senior
+
+#Input Age
 age = 65
+#check aAge
 if age < 18:
     print("Minor")
 elif age < 60:

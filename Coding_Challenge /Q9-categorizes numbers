@@ -1,0 +1,12 @@
+# Example Input
+num = -5
+
+# Check number type
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")
+#Output
+Negative

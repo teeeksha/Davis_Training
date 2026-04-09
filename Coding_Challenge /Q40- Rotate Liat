@@ -1,0 +1,14 @@
+# Example Input
+lst = [1,2,3]
+
+# Rotate right by 1
+last = lst[-1]
+
+# Shift elements
+for i in range(len(lst)-1, 0, -1):
+    lst[i] = lst[i-1]
+
+lst[0] = last
+
+print(lst)
+#Output: [3,1,2]

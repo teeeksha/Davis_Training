@@ -1,0 +1,10 @@
+# Example Input
+s1 = "listen"
+s2 = "silent"
+
+# Compare sorted strings
+if sorted(s1) == sorted(s2):
+    print(True)
+else:
+    print(False)
+#Output:-True

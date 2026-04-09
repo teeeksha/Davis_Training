@@ -1,2 +1,6 @@
-n = 15
-print("Yes" if n % 3 == 0 and n % 5 == 0 else "No")
+num = int(input("Enter number: "))
+
+if num % 3 == 0 and num % 5 == 0:
+    print("Yes")
+else:
+    print("No")

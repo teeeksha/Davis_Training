@@ -1,4 +1,17 @@
+
 #Question 4: Tuple Element Frequency
 #Problem Statement:
 #Count the frequency of each element in a tuple
 t = (1, 2, 2, 3, 1, 4, 2)
+
+freq = {}
+
+for item in t:
+    if item in freq:
+        freq[item] += 1
+    else:
+        freq[item] = 1
+
+print(freq)
+     
+{1: 2, 2: 3, 3: 1, 4: 1}

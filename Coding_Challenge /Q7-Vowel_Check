@@ -1,0 +1,15 @@
+Question 7:
+Scenario:A text processing tool identifies vowels.
+Task:Write a program to check if a character is a vowel
+
+ch = input("Enter character: ")
+
+if ch in "aeiouAEIOU":
+    print("Vowel")
+else:
+    print("Consonant")
+
+#Output
+
+Input: e
+Output: Vowel

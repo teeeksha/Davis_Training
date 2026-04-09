@@ -1,0 +1,12 @@
+# Example Input
+lst = [1,2,4,5]
+
+# Expected sum
+n = 5
+total = n*(n+1)//2
+
+# Actual sum
+actual = sum(lst)
+
+print(total - actual)
+#Output:-3

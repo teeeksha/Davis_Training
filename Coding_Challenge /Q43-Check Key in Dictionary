@@ -1,0 +1,10 @@
+# Example Input
+d = {"a":1, "b":2}
+key = "a"
+
+# Check key existence
+if key in d:
+    print("Yes")
+else:
+    print("No")
+#Output:-Yes

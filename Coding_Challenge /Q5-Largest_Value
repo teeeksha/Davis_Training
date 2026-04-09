@@ -1,0 +1,13 @@
+#Question 5:
+#Scenario:A data analytics tool needs to identify the highest value.
+#Task:Write a program to find the largest among three numbers
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+
+if a >= b and a >= c:
+    print("Largest =", a)
+elif b >= a and b >= c:
+    print("Largest =", b)
+else:
+    print("Largest =", c)

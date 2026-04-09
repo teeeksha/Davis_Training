@@ -1,0 +1,14 @@
+# Example Input
+s = "hello"
+
+result = ""
+
+# Replace vowels
+for ch in s:
+    if ch in "aeiouAEIOU":
+        result += "*"
+    else:
+        result += ch
+
+print(result)
+#Output:- h*ll*

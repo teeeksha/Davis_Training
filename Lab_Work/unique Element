@@ -1,0 +1,11 @@
+#Question 9: Merge and Sort Unique Elements
+#Problem Statement:Merge two lists and return a sorted list of unique elements.
+list1 = [4, 2, 8, 1]
+list2 = [2, 5, 1, 9]
+
+result = sorted(set(list1 + list2))
+
+print(result)
+
+     
+[1, 2, 4, 5, 8, 9]

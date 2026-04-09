@@ -1,0 +1,9 @@
+#Question 5: Convert List to Tuple and Remove Duplicates
+#Problem Statement:Convert a list into a tuple after removing duplicate elements
+lst = [1, 2, 2, 3, 4, 4, 5]
+
+result = tuple(set(lst))
+
+print(result)
+     
+(1, 2, 3, 4, 5)

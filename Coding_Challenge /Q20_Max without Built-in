@@ -1,0 +1,12 @@
+# Example Input
+lst = [5,8,2]
+
+max_val = lst[0]
+
+# Compare elements
+for i in lst:
+    if i > max_val:
+        max_val = i
+
+print(max_val)
+#Output:- 8

@@ -1,0 +1,11 @@
+# Example Input
+s = "abc"
+
+result = ""
+
+# Convert each character
+for ch in s:
+    result += chr(ord(ch) - 32)
+
+print(result)
+#Output:- ABC

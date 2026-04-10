@@ -1,0 +1,17 @@
+# to open file from read operation 
+filev= open("firstfile.txt","r")
+#to check file is open or not 
+if(filev):
+#to read data from file
+data = filev.readline()
+if(data): 
+print("Content of file :")
+while(data):
+print(data)
+data = filev.readline()
+else:
+print("file is empty")
+#closing file
+filev.close()
+else: 
+print("unable to open the file")

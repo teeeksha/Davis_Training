@@ -1,2 +1,14 @@
 # to open file from read operation 
 filev= open("firstfile.txt","r")
+#to check file is open or not 
+if(filev):
+#to read data from file
+data = filev.read()
+print(data)
+print("----------------------------------------")
+print("No. of Characters : ",len(data))
+#closing file
+filev.close()
+else: 
+print("unable to open the file)
+

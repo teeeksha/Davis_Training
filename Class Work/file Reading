@@ -1,0 +1,2 @@
+# to open file from read operation 
+filev= open("firstfile.txt","r")

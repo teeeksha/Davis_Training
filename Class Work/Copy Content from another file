@@ -1,0 +1,17 @@
+# open source file
+src = open("file1.txt", "r")
+
+# open destination file
+dest = open("file2.txt", "w")
+
+# read content
+data = src.read()
+
+# write into another file
+dest.write(data)
+
+# close files 
+src.close()
+dest.close()
+
+print("File copied successfully")

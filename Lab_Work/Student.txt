@@ -1,0 +1,4 @@
+Jiya,80,A
+Tiya,65,B
+Riya,85,A
+Priya,45,A

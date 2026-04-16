@@ -1,0 +1,2 @@
+Hello world! Hello Python.
+Python is easy. World is big.

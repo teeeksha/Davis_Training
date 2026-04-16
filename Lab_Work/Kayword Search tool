@@ -1,0 +1,9 @@
+Ask user for a keyword and return all lines from file containing that keyword
+# take keyword from user
+keyword = input("Enter keyword: ").lower()
+
+# open file and search
+with open("input.txt", "r") as f:
+    for line in f:
+        if keyword in line.lower():   # case-insensitive search
+            print(line.strip())

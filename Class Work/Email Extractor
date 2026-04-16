@@ -1,0 +1,28 @@
+#From a file data.txt,
+#Extract all valid email addresses and save them into emails.txt
+
+#Algorithm :- Open data.txt in read mode
+              Read full content
+              Define email pattern (using regex)
+              Extract all matching email addresses
+              Open emails.txt in write mode
+              Write extracted emails into file
+              Close files
+#code:-import re   # for pattern matching
+
+# open and read file
+with open("data.txt", "r") as file:
+    text = file.read()
+
+# regex pattern for emails
+pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+
+# extract emails
+emails = re.findall(pattern, text)
+
+# write emails to new file
+with open("emails.txt", "w") as out:
+    for email in emails:
+        out.write(email + "\n")
+
+print("Emails extracted successfully")

@@ -1,0 +1,15 @@
+
+Read a file and write its content in reverse order (line-wise) into another file.
+
+# reverse file content (line-wise)
+
+with open("input.txt", "r") as f:
+    lines = f.readlines()   # read all lines
+
+# reverse the list of lines
+lines.reverse()
+
+with open("output.txt", "w") as out:
+    out.writelines(lines)   # write reversed lines
+
+print("File content reversed successfully")

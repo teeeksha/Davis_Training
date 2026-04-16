@@ -1,0 +1,28 @@
+Display last N lines of a file efficiently.
+# Tail Implementation (efficient for large files)
+
+def tail(filename, n):
+    with open(filename, "rb") as f:   # binary mode for efficiency
+        f.seek(0, 2)  # move to end of file
+        end = f.tell()
+        
+        lines = []
+        buffer = b""
+        
+        # read file from end in chunks
+        while len(lines) <= n and end > 0:
+            step = min(1024, end)
+            f.seek(end - step)
+            buffer = f.read(step) + buffer
+            end -= step
+            
+            lines = buffer.split(b"\n")
+        
+        # get last n lines
+        result = lines[-n:]
+        
+        for line in result:
+            print(line.decode())
+
+# usage
+tail("input.txt", 5)

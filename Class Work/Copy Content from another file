@@ -1,3 +1,10 @@
+#Copy contents of one file into another.
+# Algorithm :- Open source file in read mode (r)
+               Open destination file in write mode (w)
+               Read content from source file
+               Write that content into destination file
+               Close both files
+
 # open source file
 src = open("file1.txt", "r")
 

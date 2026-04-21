@@ -1,0 +1,5 @@
+INFO Login success
+ERROR Disk full
+INFO Login success
+ERROR Disk full
+ERROR Network issue

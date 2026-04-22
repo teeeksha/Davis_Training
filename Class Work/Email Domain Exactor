@@ -1,0 +1,23 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Email.txt"
+
+lines = requests.get(url).text.split("\n")
+
+domains = {}
+
+for email in lines:
+    if email == "":
+        continue
+
+    parts = email.split("@")
+    domain = parts[1]
+
+    if domain in domains:
+        domains[domain] += 1
+    else:
+        domains[domain] = 1
+
+print("Domain Count:")
+for d, c in domains.items():
+    print(d, "->", c)

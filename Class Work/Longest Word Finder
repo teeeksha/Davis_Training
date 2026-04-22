@@ -1,0 +1,15 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Sentence.txt"
+
+text = requests.get(url).text
+
+words = text.split()
+
+longest = ""
+
+for word in words:
+    if len(word) > len(longest):
+        longest = word
+
+print("Longest word:", longest)

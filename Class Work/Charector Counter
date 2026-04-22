@@ -1,0 +1,20 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Text.txt"
+
+text = requests.get(url).text
+
+char_count = {}
+
+for ch in text:
+    if ch == " " or ch == "\n":
+        continue
+
+    if ch in char_count:
+        char_count[ch] += 1
+    else:
+        char_count[ch] = 1
+
+print("Character Count:")
+for ch, count in char_count.items():
+    print(ch, "->", count)

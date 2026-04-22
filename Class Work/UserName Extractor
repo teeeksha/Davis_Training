@@ -1,0 +1,15 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/users.txt"
+lines = requests.get(url).text.split("\n")
+
+print("Usernames:")
+
+for email in lines:
+    if email == "":
+        continue
+
+    parts = email.split("@")
+    username = parts[0]
+
+    print(username)

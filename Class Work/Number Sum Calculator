@@ -1,0 +1,15 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Num2.txt"
+
+lines = requests.get(url).text.split("\n")
+
+total = 0
+
+for num in lines:
+    if num == "":
+        continue
+
+    total += int(num)
+
+print("Total Sum:", total)

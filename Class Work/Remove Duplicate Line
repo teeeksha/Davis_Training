@@ -1,0 +1,15 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Data.txt"
+
+lines = requests.get(url).text.split("\n")
+
+unique = set()
+
+for line in lines:
+    if line != "":
+        unique.add(line)
+
+print("Unique Lines:")
+for item in unique:
+    print(item)

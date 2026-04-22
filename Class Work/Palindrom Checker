@@ -1,0 +1,14 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Word.txt"
+
+words = requests.get(url).text.split("\n")
+
+print("Palindromes:")
+
+for word in words:
+    if word == "":
+        continue
+
+    if word == word[::-1]:
+        print(word)

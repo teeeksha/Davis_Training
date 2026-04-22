@@ -1,0 +1,13 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Line.txt"
+
+lines = requests.get(url).text.split("\n")
+
+print("Reversed Lines:")
+
+for line in lines:
+    if line == "":
+        continue
+
+    print(line[::-1])

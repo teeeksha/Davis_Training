@@ -1,0 +1,14 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Para.txt"
+
+text = requests.get(url).text.lower()
+
+vowels = "aeiou"
+count = 0
+
+for ch in text:
+    if ch in vowels:
+        count += 1
+
+print("Total Vowels:", count)

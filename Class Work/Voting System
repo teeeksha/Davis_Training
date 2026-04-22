@@ -1,0 +1,28 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Voting.txt"
+
+lines = requests.get(url).text.split("\n")
+
+votes = {}
+
+for line in lines:
+    if line == "":
+        continue
+
+    if line in votes:
+        votes[line] += 1
+    else:
+        votes[line] = 1
+
+# Find winner
+max_votes = 0
+winner = ""
+
+for candidate, count in votes.items():
+    if count > max_votes:
+        max_votes = count
+        winner = candidate
+
+print("Votes:", votes)
+print("Winner:", winner)

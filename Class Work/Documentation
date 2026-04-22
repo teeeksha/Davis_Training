@@ -1,167 +1,71 @@
-# 📘 Documentation
+Documentation
+Title: Reading a Text File from GitHub Repository in Google Colab using Python
+ Objective
 
-## Reading a Text File from a GitHub Repository into Python using Google Colab
+To read a text file stored in a GitHub repository directly into a Python program using Google Colab.
 
----
+ Concept:- 
 
-## 🔹 Objective
+GitHub files are normally accessed using a URL, but raw files cannot be directly read using standard file handling methods unless converted into a raw format link.
 
-To read a `.txt` file stored in a GitHub repository directly into Python using Google Colab.
+Google Colab allows fetching such files using:
 
----
+requests module
+urllib module
+Direct file reading via raw URL
 
-## 🔹 Introduction
+Requirements:- 
+Google Colab environment
+Internet connection
+GitHub repository file link
 
-GitHub repositories store files, but the URLs shown in the browser are typically **HTML pages**, not the actual file content.
-To read a file in Python, we must access the **raw version** of the file.
-
----
-
-## 🔹 Key Concept
-
-There are two types of GitHub URLs:
-
-| Type       | Example                         | Use                      |
-| ---------- | ------------------------------- | ------------------------ |
-| Normal URL | `github.com/.../blob/...`       | ❌ Not usable (HTML page) |
-| Raw URL    | `raw.githubusercontent.com/...` | ✔ Used for reading data  |
-
-👉 Python can only read **raw file content**, not web pages.
-
----
-
-## 🔹 Step-by-Step Procedure
-
-### 1. Open File in GitHub
-
-* Navigate to your repository
-* Open the `.txt` file
-
----
-
-### 2. Get Raw File URL
-
-* Click on the **“Raw”** button
-* Copy the URL
+Step 1: Get Raw File URL from GitHub
+Open your file on GitHub
+Click on "Raw" button
+Copy the URL
 
 Example:
 
-```
-https://raw.githubusercontent.com/user/repo/main/file.txt
-```
-
----
-
-### 3. Write Code in Google Colab
-
-#### Method 1: Using `requests` library
-
-```python
+https://raw.githubusercontent.com/username/repo/main/file1.txt
+Step 2: Python Code (Method 1 – Using requests)
 import requests
 
-url = "https://raw.githubusercontent.com/user/repo/main/file.txt"
+# Raw file URL
+url = "https://raw.githubusercontent.com/username/repo/main/file1.txt"
 
-response = requests.get(url)
-data = response.text
-
-print(data)
-```
-
----
-
-#### Method 2: Using built-in `urllib`
-
-```python
-from urllib.request import urlopen
-
-url = "https://raw.githubusercontent.com/user/repo/main/file.txt"
-
-data = urlopen(url).read().decode('utf-8')
-
-print(data)
-```
-
----
-
-### 4. Verify Output
-
-* If successful → file content will be printed
-* If not → check error codes
-
----
-
-## 🔹 Error Handling
-
-```python
-import requests
-
-url = "RAW_URL"
-
+# Send request to fetch file
 response = requests.get(url)
 
-print(response.status_code)  # Debugging
-```
+# Check if request successful
+if response.status_code == 200:
+    data = response.text
+    print("File Content:\n")
+    print(data)
+else:
+    print("Failed to retrieve file")
 
-| Code | Meaning           |
-| ---- | ----------------- |
-| 200  | Success           |
-| 404  | File not found    |
-| 403  | Permission denied |
+Step 3: Python Code (Method 2 – Using urllib)
+import urllib.request
 
----
+url = "https://raw.githubusercontent.com/username/repo/main/file1.txt"
 
-## 🔹 Alternative Method (Clone Repository)
+# Open URL and read data
+file = urllib.request.urlopen(url)
 
-If multiple files are needed:
+content = file.read().decode('utf-8')
 
-```python
-!git clone https://github.com/user/repo.git
-```
+print("File Content:\n")
+print(content)
 
-Then:
+Step 4: Save File Locally in Colab (Optional)
+with open("downloaded_file.txt", "w") as f:
+    f.write(content)
 
-```python
-with open("repo/file.txt", "r") as f:
-    data = f.read()
+print("File saved successfully")
 
-print(data)
-```
-
----
-
-## 🔹 Common Mistakes
-
-* Using `github.com/.../blob/...` instead of raw URL
-* Forgetting to decode byte data (`.decode('utf-8')`)
-* Trying to access private repositories without permission
-* Incorrect file path after cloning
-
----
-
-## 🔹 Applications
-
-* Reading datasets
-* Text processing
-* File analysis (word count, filtering, etc.)
-* Machine learning data input
-
----
-
-## 🔹 References
-
-* [Requests Library Documentation](https://docs.python-requests.org/en/latest/?utm_source=chatgpt.com)
-* [Python urllib Documentation](https://docs.python.org/3/library/urllib.request.html?utm_source=chatgpt.com)
-
----
-
-## 🔹 Conclusion
-
-To read a text file from GitHub in Google Colab:
-
-* Always use the **raw file URL**
-* Use Python libraries like `requests` or `urllib`
-* Ensure correct permissions and file path
-
-👉 This method enables seamless integration of GitHub-hosted data into Python workflows.
-
----
+Explanation of Logic
+Convert GitHub file → Raw URL
+Send request to server
+Fetch file content as text
+Decode (if needed)
+Print or store locally

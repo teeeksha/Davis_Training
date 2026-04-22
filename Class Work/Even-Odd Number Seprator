@@ -1,0 +1,22 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Number.txt"
+
+lines = requests.get(url).text.split("\n")
+
+even = []
+odd = []
+
+for num in lines:
+    if num == "":
+        continue
+
+    n = int(num)
+
+    if n % 2 == 0:
+        even.append(n)
+    else:
+        odd.append(n)
+
+print("Even:", even)
+print("Odd:", odd)

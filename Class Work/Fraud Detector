@@ -1,0 +1,36 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Transaction.txt"
+
+lines = requests.get(url).text.split("\n")
+
+threshold = 6000
+last_time = {}
+suspicious = {}
+
+for line in lines:
+    if line == "":
+        continue
+
+    parts = line.split(",")
+
+    try:
+        user = parts[0]
+        amount = int(parts[1])
+        time = int(parts[2])
+
+        if amount > threshold:
+            suspicious[user] = "High Amount"
+
+        if user in last_time:
+            if time - last_time[user] <= 2:
+                suspicious[user] = "Frequent Transaction"
+
+        last_time[user] = time
+
+    except:
+        print("Invalid data:", line)
+
+print("Suspicious Users:")
+for u, reason in suspicious.items():
+    print(u, "->", reason)

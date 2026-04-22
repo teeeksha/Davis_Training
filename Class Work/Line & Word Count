@@ -1,0 +1,19 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Doc.txt"
+
+text = requests.get(url).text
+
+lines = text.split("\n")
+words = text.split()
+
+# Remove empty lines
+line_count = 0
+for line in lines:
+    if line != "":
+        line_count += 1
+
+word_count = len(words)
+
+print("Total Lines:", line_count)
+print("Total Words:", word_count)

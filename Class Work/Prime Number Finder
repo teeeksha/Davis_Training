@@ -1,0 +1,25 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Num.txt"
+
+numbers = requests.get(url).text.split("\n")
+
+print("Prime Numbers:")
+
+for num in numbers:
+    if num == "":
+        continue
+
+    n = int(num)
+    is_prime = True
+
+    if n < 2:
+        is_prime = False
+    else:
+        for i in range(2, n):
+            if n % i == 0:
+                is_prime = False
+                break
+
+    if is_prime:
+        print(n)

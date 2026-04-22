@@ -1,0 +1,18 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/marks.txt"
+
+lines = requests.get(url).text.split("\n")
+
+print("Passed Students:")
+
+for line in lines:
+    if line == "":
+        continue
+
+    parts = line.split(",")
+    name = parts[0]
+    marks = int(parts[1])
+
+    if marks >= 50:
+        print(name)

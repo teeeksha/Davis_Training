@@ -1,0 +1,19 @@
+import requests
+
+url = "https://raw.githubusercontent.com/teeeksha/Davis_Training/refs/heads/main/Class%20Work/Article.txt"
+
+text = requests.get(url).text.lower()
+
+words = text.split()
+
+freq = {}
+
+for word in words:
+    if word in freq:
+        freq[word] += 1
+    else:
+        freq[word] = 1
+
+print("Word Frequency:")
+for w, c in freq.items():
+    print(w, "->", c)
